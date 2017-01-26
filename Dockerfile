@@ -3,6 +3,8 @@ FROM ivan1993spb/php7-fpm-all-extensions:latest
 
 MAINTAINER Ivan Pushkin <iv.pushk@gmail.com>
 
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -yq git
+
 # Register the COMPOSER_HOME environment variable
 ENV COMPOSER_HOME /composer
 
